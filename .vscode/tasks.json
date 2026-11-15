@@ -1,0 +1,28 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build SafePath",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "main.c",
+                "-o",
+                "safepath.exe",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
